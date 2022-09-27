@@ -1,9 +1,10 @@
 segment .data
 	fmts: db "%s",0
 	fmtn: db "%d",0
-	msg2: db "Enter no",10,0
-	msg1: db "Enter string",10,0
+	msg2: db " Enter no",10,0
+	msg1: db " Enter string",10,0
 	msg: db "Hello",10,0
+	msgn: db "",10,0
 
 
 segment .bss

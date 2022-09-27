@@ -1,3 +1,5 @@
+final:a.out
+	./a.out
 test:test.o
 	gcc -no-pie test.o
 test.o:test.asm
