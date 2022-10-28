@@ -1,1 +1,12 @@
-Hi
+commands 
+1) exit = uses to exit the shell ==> implemented using break
+
+2) cd = uses for changing current directory --> options -L n -P ==> implemented uding chdir
+3) echo = print --> options -n, --help ==> implemented using printf
+4) pwd = get current path --> options -L, -P ==> implementing using getcwd
+
+5) ls = list files/folders in current directory -->options -m, -R ==> implementing using DIR, opendir
+6) cat = file open --> -n, -E ==> File open
+7) date = date n time --> options -I, -R ==> time.h
+8)  rm = remove --> options -i, -f ==> rm
+9) mkdir = create --> options -v, -p ==> mkdir
