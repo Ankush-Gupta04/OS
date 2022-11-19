@@ -1,3 +1,3 @@
 only:
-	gcc demo.c
+	gcc Q2_demo.c
 	./a.out
