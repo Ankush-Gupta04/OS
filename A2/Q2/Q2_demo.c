@@ -6,7 +6,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <errno.h>
-#define SYS_kernel_2d_memcpy 548
+#define SYS_kernel_2d_memcpy 451
 
 
 int main(int argc, char **argv){
