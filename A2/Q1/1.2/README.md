@@ -1,33 +1,10 @@
-#include <stdio.h>
-#include <sys/types.h>
-#include <unistd.h>
-#include <stdlib.h>
-#include <sys/wait.h>
-#include <time.h>
+bhai simple code hai no explantion needed 
+memory bhar gyai sir se kl baat karunga 
 
-#define BILLION 1000000000L;
+abhi tK yahi output hai 
 
-int main(){
-	char * argv[] = {"temp.sh",NULL};
-	int p = fork();
-	struct timespec start, end;
-	if (clock_gettime(CLOCK_REALTIME, &start) == -1){
-		perror("hard luck");
-	}
-	if (p == 0){
-		int arc = execv("temp.sh",argv);
-		printf("%d",arc);
-		perror("hi:: ");
-		sleep(2);
-        	exit(EXIT_SUCCESS);
-	}
-	waitpid(p,NULL,0);
-	if (clock_gettime(CLOCK_REALTIME, &end) == -1){
-		perror("hard luck");
-	}
-	double a1 = (end.tv_sec - start.tv_sec) + (double)(end.tv_nsec - start.tv_nsec) /(double) BILLION;
-	printf("%lf", a1);
-	
-}
+![2022-11-19](https://user-images.githubusercontent.com/100823564/202922204-f35aca71-14d4-4c05-9201-52dc1f177384.png)
+jab ek hi process ho
 
-
+![2022-11-21](https://user-images.githubusercontent.com/100823564/202922226-39c81faa-f3f7-4c27-bc74-53403cbc0faf.png)
+![2022-11-21 (1)](https://user-images.githubusercontent.com/100823564/202922231-16ab059c-d1b1-46a2-b790-9b67375885cf.png)
