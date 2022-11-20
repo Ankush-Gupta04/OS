@@ -52,7 +52,7 @@ int main(){
 	}
 	int p2 = fork();
 	if (p2 == 0){
-		int arc = execl("bash1.sh","bash1.sh",NULL);
+		int arc = execl("bash3.sh","bash3.sh",NULL);
 		printf("%d",arc);
 		perror("hi:: ");
 		sleep(2);
