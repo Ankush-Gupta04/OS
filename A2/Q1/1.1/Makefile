@@ -1,3 +1,3 @@
 all:
-  gcc q1_1.c
-  ./a.out
+	gcc q1_1.c
+	./a.out

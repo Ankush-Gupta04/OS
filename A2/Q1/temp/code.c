@@ -33,7 +33,7 @@ int main(){
 	int p1 = fork();
 	if (p1 == 0){
 		struct sched_param pp2;
-		pp2.sched_priority = 1;
+		pp2.sched_priority = 46;
 		sched_setscheduler(p, SCHED_FIFO ,&pp2);
 		perror("policy: ");
 		int arc = execl("bash2.sh","bash2.sh",NULL);
@@ -48,7 +48,7 @@ int main(){
 	int p2 = fork();
 	if (p2 == 0){
 		struct sched_param pp3;
-		pp3.sched_priority = 1;
+		pp3.sched_priority = 48;
 		sched_setscheduler(p, SCHED_RR ,&pp3);
 		perror("policy: ");
 		int arc = execl("bash3.sh","bash3.sh",NULL);
@@ -130,5 +130,10 @@ int main(){
 		aa2 = (end3.tv_sec - start.tv_sec) + (double)(end3.tv_nsec - start.tv_nsec) /(double) BILLION;
 	}
 	printf("%lf %lf %lf ",aa1,aa2,aa3);
-	
+	FILE *reading;
+	reading = fopen("readings.txt","w");
+	fprintf(reading,"%lf\n",aa1);
+	fprintf(reading,"%lf\n",aa2);
+	fprintf(reading,"%lf\n",aa3);
+	return 0;
 }
