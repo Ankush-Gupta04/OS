@@ -1,6 +1,6 @@
-diff --git os/OS/A2/Q2/linux-5.18.8/arch/x86/entry/syscalls/syscall_64.tbl os/OS/A2/Q2/linux-5.18.8/arch/x86/entry/syscalls/syscall_64.tbl
+diff --git linux-5.18.8/arch/x86/entry/syscalls/syscall_64.tbl os/OS/A2/Q2/linux-5.18.8/arch/x86/entry/syscalls/syscall_64.tbl
 index f6b5779..e2b714e 100644
---- os/OS/A2/Q2/linux-5.18.8/arch/x86/entry/syscalls/syscall_64.tbl
+--- linux-5.18.8/arch/x86/entry/syscalls/syscall_64.tbl
 +++ os/OS/A2/Q2/linux-5.18.8/arch/x86/entry/syscalls/syscall_64.tbl
 @@ -369,7 +369,7 @@
  449	common	futex_waitv               sys_futex_waitv
@@ -12,7 +12,7 @@ index f6b5779..e2b714e 100644
  # in x32 as compared to native x86_64.  These syscalls have numbers 512-547.
 diff --git os/OS/A2/Q2/linux-5.18.8/kernel/sys.c os/OS/A2/Q2/linux-5.18.8/kernel/sys.c
 index ef1a78f..14c6cf3 100644
---- os/OS/A2/Q2/linux-5.18.8/kernel/sys.c
+--- linux-5.18.8/kernel/sys.c
 +++ os/OS/A2/Q2/linux-5.18.8/kernel/sys.c
 @@ -199,7 +199,23 @@ static int set_one_prio(struct task_struct *p, int niceval, int error)
  out:
