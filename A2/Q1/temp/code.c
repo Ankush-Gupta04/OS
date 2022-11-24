@@ -80,7 +80,7 @@ int main(){
 		if (clock_gettime(CLOCK_REALTIME, &end3) == -1){
 			perror("hard luck");
 		}
-		aa2 = (end3.tv_sec - start.tv_sec) + (double)(end3.tv_nsec - start.tv_nsec) /(double) BILLION;
+		aa3 = (end3.tv_sec - start.tv_sec) + (double)(end3.tv_nsec - start.tv_nsec) /(double) BILLION;
 	}
 
 
@@ -104,7 +104,7 @@ int main(){
 		if (clock_gettime(CLOCK_REALTIME, &end3) == -1){
 			perror("hard luck");
 		}
-		aa2 = (end3.tv_sec - start.tv_sec) + (double)(end3.tv_nsec - start.tv_nsec) /(double) BILLION;
+		aa3 = (end3.tv_sec - start.tv_sec) + (double)(end3.tv_nsec - start.tv_nsec) /(double) BILLION;
 	}
 
 	// third waitpid
@@ -127,7 +127,7 @@ int main(){
 		if (clock_gettime(CLOCK_REALTIME, &end3) == -1){
 			perror("hard luck");
 		}
-		aa2 = (end3.tv_sec - start.tv_sec) + (double)(end3.tv_nsec - start.tv_nsec) /(double) BILLION;
+		aa3 = (end3.tv_sec - start.tv_sec) + (double)(end3.tv_nsec - start.tv_nsec) /(double) BILLION;
 	}
 	printf("%lf %lf %lf ",aa1,aa2,aa3);
 	FILE *reading;
