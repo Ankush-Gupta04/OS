@@ -3,10 +3,10 @@ index f6b5779..e2b714e 100644
 --- b/linux-5.18.8/arch/x86/entry/syscalls/syscall_64.tbl
 +++ a/linux-5.18.8/arch/x86/entry/syscalls/syscall_64.tbl
 @@ -369,7 +369,7 @@
- 448	common	futex_waitv               sys_futex_waitv
- 449	common	set_mempolicy_home_node   sys_set_mempolicy_home_node
+ 449	common	futex_waitv               sys_futex_waitv
+ 450	common	set_mempolicy_home_node   sys_set_mempolicy_home_node
 -
-+450  common  kernel_2d_memcpy          sys_kernel_2d_memcpy
++451  common  kernel_2d_memcpy          sys_kernel_2d_memcpy
  #
  # Due to a historical design error, certain syscalls are numbered differently
  # in x32 as compared to native x86_64.  These syscalls have numbers 512-547.
