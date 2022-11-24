@@ -15,12 +15,12 @@ r_p = ["other","fifo","rr"]
 plt.bar(r_p,r_l, color='black', width=0.2)
 
 # naming the x axis
-plt.xlabel('nice value')
+plt.xlabel('policy ')
 # naming the y axis
 plt.ylabel('time')
 
 # giving a title to my graph
-plt.title('other ')
+plt.title('1.2_Ankush_Gupta_2021232')
 
 # function to show the plot
 plt.show()
