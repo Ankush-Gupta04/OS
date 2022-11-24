@@ -16,7 +16,7 @@ index ef1a78f..14c6cf3 100644
 +++ os/OS/A2/Q2/linux-5.18.8/kernel/sys.c
 @@ -199,7 +199,23 @@ static int set_one_prio(struct task_struct *p, int niceval, int error)
  out:
- 	return error;
+ 	return 0;
  }
 -
 +SYSCALL_DEFINE4( kernel_2d_memcpy, float**, dst, float**, src, int, row, int, col){
