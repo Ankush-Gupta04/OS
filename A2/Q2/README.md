@@ -3,7 +3,6 @@ Commands followed to be run in root:
 2) cd A2_Q2
 3) wget https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.19.8.tar.xz  
 4) tar -xvJf linux-5.19.8.tar.xz // untar the kernel
-5)  patch -p0 < diff
 6)  cd linux-5.19.8
 7)  cd kernel
 8)  vim sys.c
@@ -13,6 +12,7 @@ Commands followed to be run in root:
 11) vim syscall_64.tbl
  ++ 451 common  kernel_2d_memcpy  sys_kernel_2d_memcpy
 12) cd .. // tab tak karo jab tak linux-5.19.8 aajaye xdd..
+ patch -p0 < diff
 13)  wget https://raw.githubusercontent.com/gopi487krishna/ArtixConfig/main/config-rev-9-gold
 14)  cp config-rev-9-gold .config
 15)  make menuconfig 
