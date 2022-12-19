@@ -67,7 +67,7 @@ int main(){
     }
 
     int index = 0;
-    while (index != 49){
+    while (index != 50){
         if (write(data_skt,list[index],str_len + 1) == -1){
             perror("write1: ");
             exit(1);
@@ -98,5 +98,10 @@ int main(){
         printf("%d\n",index);
     }
     close(data_skt);
+    if (clock_gettime(CLOCK_REALTIME, &end) == -1){
+		perror("hard luck");
+	}
+	double a1 = (end.tv_sec - start.tv_sec) + (double)(end.tv_nsec - start.tv_nsec) /(double) BILLION;
+	printf("%lf secs\n",a1);
     return 1;
 }
