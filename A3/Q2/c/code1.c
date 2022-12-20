@@ -81,5 +81,12 @@ int main(){
 
     while(*shm != '*')
         sleep(1);
+	
+if (clock_gettime(CLOCK_REALTIME, &start) == -1){
+	perror("hard luck");
+exit(1);
+}
+double aa1 = end.sec-start.sec + (double)(end.n_sec - start.n_sec)/(double)BILLION;
+	
     return 0;
 }
